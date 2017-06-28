@@ -1,0 +1,407 @@
+body{
+    font-family: Tahoma;
+    overflow-x: hidden;
+    font-size: 16px;
+    position: relative;
+}
+/*===css controlling the moving up and down of the navbar====*/
+.modal-backdrop{
+    position: relative;
+}
+/*===End  of css controlling the moving up and down of the navbar====*/
+
+.row {
+    margin: 0;}
+/* =====styling the hero image area=== */
+#home{
+    background-image: url('nicholau-nicholas-lau-photography-london-uk-wedding-fine-art-film-nigerian-black-african-traditional-bowtie-tuxedo-sweetheart-neckline-forehead-kiss-touch-admiration-683x1024.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 665px;
+    background-attachment: fixed;
+    color: #fff;
+}
+/* ====overlay for the home==== */
+.overlay{
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgba(51, 51, 51, 0.26);
+    height: 665px;
+}
+/* ===end of the ovelay for the home=== */
+.navbar-container{
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    top: 0;
+    display: block !important;
+    z-index: 5;
+}
+.navbar-container a{
+    color: #444;
+}
+.navbar-container a:hover{
+    background-color: transparent !important;
+    border-bottom: 2px solid #f14e78;
+}
+.navbar-container a:active{
+    background-color: transparent !important;
+    border-bottom: 2px solid #f14e78;
+}
+
+/* ===TELLING THE NAVBAR TO BE TRANSPARENT WHEN PRESENT IN THE HERO IMAGE==== */
+.slide_down_up_transparent, .slide_down_up_transparent a{
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==== END OF Navbar aniomations======== */
+
+
+/* =====END OF styling the hero image area=== */
+
+.navbar-toggle{
+    background-color: rgba(0, 0, 0, 0.19);
+}
+
+/* ==========POSTIONING THE HERO IMAGE======= */
+.hero_image_animation_position{
+    position: absolute;
+    top: 95%;
+    left: 55%;
+    margin: -75px 0 0 -75px;
+    color: #FFF;
+}
+.intro_talk{
+    font-family: 'Alex Brush', cursive;
+    font-size: 20px;
+}
+.couple_gif {
+    height: 20px;
+    animation: bar 1s;
+    margin-left: -10px;
+    margin-top: 30px;
+}
+.hero_location{
+    font-size: 12px !important;
+}
+
+
+/* =======END OF ANIMATING THE INTRO TALK======= */
+
+/* ===============STYLING THE HEADERS===== */
+.section2{
+     margin-top: 300px;
+     background-color: #fff;
+     z-index: 5;
+     font-size: 20px;
+}
+.line{
+    display: block;
+     background-image: url('section-line.png');
+    background-repeat: no-repeat;
+    position: relative;
+    height: 50px;
+    width: 100px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: 10px;
+}
+.heading_msg{
+    color: #f14e78;
+    font-family: Brush Script Std;
+    font-size: 60px;
+    padding-top: 50px;
+}
+/* ===============END OF STYLING THE HEADERS===== */
+.banner_text_location{
+
+}
+.events{
+    width: 100%;
+    height: 500px;
+}
+.event_title{
+    background: #e9e9e9;
+    font-family: Adobe Caslon Pro;
+    font-size: 16px;
+    padding: 10px;
+}
+.event_title:hover{
+ color: #f14e78;
+}
+.event_description{
+    font-family: tahoma;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.gift_registery{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+
+/* =============styling the Gift registry area====== */
+
+.gift_registery .item_container{
+    border: 1px solid #999;
+}
+.gift_registery .item_container h6, .gift_registery .item_container h4{
+    padding: 10px;
+}
+.gift_registery .border_bottom{
+    border-bottom: 1px solid #999;
+}
+.gift_registery h6, .gift_registery a{
+    color: #999;
+    cursor: pointer;
+}
+.gift_registery a:hover{
+    color: #00e5ff;
+    text-decoration: none !important;
+}
+.gift_registery .row .row .img-responsive{
+    padding-top: 70px;
+     padding-bottom: 70px;
+}
+.gift_registery .margin_between{
+    margin-top: 50px;
+}
+.gift_registery h3{
+    color: black;
+}
+.gift_registery ul li{
+    list-style: none;
+}
+.gift_registery .image_container{
+    height: 195px;
+}
+.gift_registery img{
+}
+.bordered{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/* =============END OF styling the Gift registry area====== */
+.img_margin_bottom{
+    margin-bottom: 20px;
+}
+
+/* ============styling the wedding info area======= */
+.timer{
+    display: block;
+    background-image: url('couple_propse.jpg');
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 487px;
+}
+
+/* ===============styling the countdown area================ */
+#del-countdown h3{
+    color: #fff;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+}
+#del-countdown{
+    width: 80%;
+    margin-top: 40%;
+    background-color: rgba(84, 82, 82, 0.58);
+}
+#clock span {
+    float: left;
+    font-size: 16px;
+    margin: 0 2.5%;
+    color: #fff;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#clock:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#units span{
+    float: left;
+    width: 18.8%;
+    text-align: center;
+    margin-top: 30px;
+    color: #DDD;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px rgba(10,10,10, 0.7);
+}
+span.turn {
+    animation: turn 0.7s ease forwards;
+}
+@keyframes turn{
+    0%{transform: rotateX(0deg);}
+    100%{transform: rotateX(360deg);}
+}
+
+/* ======================desinging the FOOTER===== */
+
+#rsvp{
+    font-family: Adobe Caslon Pro;
+    padding-top:  100px;
+    padding-bottom: 100px;
+    background-image: url('footer_picture.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    color: #FFF;
+}
+.footer_content{
+    padding-top: 50px;
+}
+.footer_couples{
+    margin-top: -30px;
+    margin-left: 40px;
+}
+.footer_line{
+     display: block;
+     background-image: url('footer_design.png');
+    background-repeat: no-repeat;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    left: 25%;
+    bottom: 0;
+}
+.our_story{
+    background-color: #F8F8F8;
+    position: relative;
+}
+#imageSlide{
+    animation: slideright 2s ease;
+    display: none;
+}
+@keyframes slideright{
+    from{ right: -50%; }
+    to { right: 0%; }
+}
+.modal-dialog{
+    font-family: tahoma;
+    font-size: 14px;
+}
+.active{
+     background-color: transparent !important;
+    border-bottom: 2px solid #f14e78 !important;
+}
+.slide_down{
+    background-color: rgba(51, 51, 51, 0.54);
+    transition: 0.5s;
+}
+.slide_down a{
+    color: white !important;
+}
+.slide_up{
+    background-color: transparent;
+    transition: 0.5s;
+}
+.banner_text{
+    color: white;
+    font-family: Lucida Handwriting;
+    position: absolute;
+    top: 65%;
+    left: 28%;
+}
+.participant_names{
+    font-size: 40px;
+    line-height: 43px;
+    position: relative;
+    font-weight: 400;
+    border-left : 2px solid #FFF;
+     border-right : 2px solid #FFF;
+}
+.banner_date{
+    position: relative;
+
+}
+.left_heart{
+    position: absolute;
+    margin-left: -30px;
+}
+/* ===============END of styling the countdown area================ */
+
+
+/* ============end of styling the wedding info area======= */
+
+
+.share_on_social_pic_promote_bet{
+    line-height: 2em;
+}
+.picture img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border:  0;
+    width: 600px;
+    height: 590px;
+    padding-top: 50px;   
+    padding: 20px; 
+}
+/* =================css adjustments for layout 1===================== */
+#pad_remove{
+    padding-right: 0px;
+    padding-left: 30px;
+}
+#clock{
+    width: 310px
+}
+#units{
+    width: 400px;
+}
+.brides li{
+    padding: 5px;
+    list-style: none;
+}
+#for_the_couple{
+    padding-top: 20px;
+}
+.img_responsive1{
+    padding: 0px !important;
+    height: 195px !important;
+}
+#banner_info{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.events h5 span{
+    color: #f14e78;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 770px){
+    body{
+        overflow-x: hidden;
+    }
+}
