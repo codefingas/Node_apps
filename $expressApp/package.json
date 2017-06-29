@@ -1,0 +1,27 @@
+{
+  "name": "express_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.15.3",
+    "gulp-jshint": "^2.0.4",
+    "mocha": "^3.4.2",
+    "mongoose": "^4.11.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jshint": "^2.0.4",
+    "jshint-stylish": "^2.2.1",
+    "mocha": "^3.4.2",
+    "wiredep": "^4.0.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
