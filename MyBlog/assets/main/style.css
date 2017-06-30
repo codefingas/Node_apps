@@ -1,0 +1,114 @@
+body{
+    color: #999;
+    overflow-x: hidden;
+    font-size: 16px !important;
+}
+nav{
+
+}
+nav ul li a{
+    color: #999;
+}
+nav ul li a:hover{
+    color: #00e5ff !important;
+}
+.jumbotron{
+    background-color: white;
+}
+.item_container{
+    border: 1px solid #999;
+}
+.item_container h6{
+    padding: 10px;
+}
+.border_bottom{
+    border-bottom: 1px solid #999;
+}
+a{
+    color: #999;
+}
+a:hover{
+    color: #00e5ff;
+    text-decoration: none !important;
+}
+ul li{
+    list-style: none;
+}
+#small_btn{
+    float: right;
+}
+#home{
+    background-image: url('people.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    color: #fff;
+}
+#mapMarkers{
+
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgba(51, 51, 51, 0.44);
+    height: 650px;
+}
+.section_2{
+    color: #577783;
+    font-size: 20px !important;
+}
+#section_2_jumbotron{
+    background-color: white !important;
+     color: #577783 !important;
+}
+.section_2_p{
+    line-height: 50px;
+}
+.audience{
+    margin-top: -15px;
+}
+footer{
+    color: white;
+    background-color: #2f454f;
+}
+footer section ul {
+    display: inline-block;
+}
+#small_btn:hover{
+    background-color: #00e5ff !important;
+    transition: 0.5s;
+}
+.section_1_description{
+    line-height: 30px;
+    font-size: 14px;
+}
+.action{
+    position: absolute;
+    top: 40%;
+    margin: -40px 0 0 -5px;
+    font-weight: 500;
+    font-size: .8125rem;
+
+}
+#button_action{
+    color: #2f454f;
+    font-weight: 500;
+    font-size: 14px;
+    width: 159.52px;
+    height:  49px;
+}
+.description_details{
+    font-size: 16px;
+    font-weight: 600;
+}
+footer ul li a{
+    color: white !important;
+}
