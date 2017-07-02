@@ -16,25 +16,51 @@ app.get("/", function(req, res){
 	res.sendFile(`${__dirname}/index.html`);
 });
 
+app.post("/page",urlencodedParser, function(req, res){
+    res.render("subscribe");
+	var data = req.body;
+	var transporter = nodemailer.createTransport({
+        service : 'gmail',
+        auth: {
+            //=====the starred field has to be filled with the email username and password===
+            user: '**********',
+            pass: '*********'
+        }
+    });
+    var mailOptions = {
+        from: '${data.email}',
+        to: ', ${data.email}',
+        subject: 'subscribe request',
+        html: `Hello! a user has subscribe to recieve information of recent updates<br/>
+				email: ${data.bottom}`,
+    };
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent! ' + info.response);
+        }
+    });
+});
 
 app.post("/contact", function(req, res){
 	res.sendFile(`${__dirname}/index.html`)
 })
 
 app.post("/index", urlencodedParser, function(req, res){
-	console.log("the fields filled with asteriks has to be filled for the app to be able to send meassages");
 	res.render("contact-us", {data: req.body});
 	var data = req.body;
 	var transporter = nodemailer.createTransport({
         service : 'gmail',
         auth: {
-            user: '***********',
-            pass: '*************'
+            //=====the starred field has to be filled with the email username and password===
+            user: '********',
+            pass: '********'
         }
     });
     var mailOptions = {
-        from: '*****the email filled in the auth******',
-        to: '************, ${data.email}',
+        from: '${data.email}',
+        to: ', ${data.email}',
         subject: 'PURCHASE request',
         html: `<!DOCTYPE html>
 				<html>
@@ -66,10 +92,12 @@ app.post("/index", urlencodedParser, function(req, res){
 				name: ${data.name}<br/>
 				phone number: ${data.phone}<br/>
 				email: ${data.email}<br/>
-				address: ${data.address}
+				address: ${data.address}<br/>
+				message: ${data.message}
 				</p>
 				<p>
 					the details of the request is to buy the following items:
+                    ${data.purchase_items}
 				</p>
 
 				</body>
@@ -86,4 +114,4 @@ app.post("/index", urlencodedParser, function(req, res){
 
 
 app.listen(9000, "127.0.0.1");
-console.log("s3rv3r on!");
+console.log("s3rv3r on!  port='9000'");

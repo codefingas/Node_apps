@@ -76,6 +76,13 @@ ul.pageNav li.icon{
     font-size: 14px;
     line-height: 1.4;
 }
+.checkout_buttons button{
+    background-color: #868686 !important;
+}
+#clear_cart{
+    background-color: white;
+    border: 1px solid #868686;
+}
 .checkout_btn_continue{
      margin-bottom: 10px;
     border: none;
@@ -186,10 +193,7 @@ ul.pageNav li.icon{
     margin-left: -60px;
 }
 .modal-content{
-    background-color: lightyellow;
-}
-.checkout_count{
-    border: 1px solid #999;
+    
 }
 .added_notification{
     color: red;
@@ -224,11 +228,18 @@ footer ul li{
 .success_writing{
     font-family: Lucida Handwriting !important;
 }
-.card {
+.card{
     cursor: pointer;
 }
-
-
+textarea{
+    width: 100%;
+}
+input,label{
+    display: flex;
+    align-content: left;
+    align-items: left;
+    width: 100%;
+}
 
 
 

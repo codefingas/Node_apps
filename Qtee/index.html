@@ -11,7 +11,7 @@
 <body>
     
     <!--==================== Modal=================== -->
-        <div id="myModal" class="modal fade" role="dialog">
+        <div id="myModal" class="modal fade text-center" role="dialog">
           <div class="modal-dialog">
 
             <!--================= Modal content========================-->
@@ -23,9 +23,11 @@
                     </h3>
               </div>
               <div class="modal-body">
-                    <ul id="Payout_cart">
-                 
-                    </ul>
+                  
+                 <form id="contact_form" method="POST" action="/index">
+                    <textArea id="payout_cart" name="purchase_items" readonly>
+                        
+                     </textArea>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="checkout_count">
@@ -51,29 +53,31 @@
                     Enter Your Details
                 </h3>
                 <p class="text-center">Dont Worry We Hate Spam as much as you do</p>
-                 <form id="contact_form" method="POST" action="/index" class="text-center">
-
+                     
                     <label for="name">Your Full Name</label><br/>
 
-                    <input type="text" placeholder="Your full name*" name="name" required><br/>
+                    <input id="name" type="text" placeholder="Your full name*" name="name" required autofocus="autofocus"><br/>
 
                     <label for="email">Your Email Address</label><br/>
 
-                    <input id="user_email" type="email" placeholder="Enter Email*" name="email" required><br/>
+                    <input id="user_email" type="email" placeholder="Enter Email*" autocomplete="off" name="email" required><br/>
 
                     <label for="phone">Your Phone Number</label><br/>
 
-                    <input id="user_number" type="number" placeholder="Enter Phone Number*" name="phone" required><br/>
+                    <input id="user_number" type="number" placeholder="Enter Phone Number*" name="phone" autocomplete="off" required><br/>
 
                      <label for="address">Delivery Address</label><br/>
 
-                        <input id="user_address" type="address" placeholder="Enter Your Address*" name="address" required><br/>
-
-                        <input type="submit" value="Buy"  class="btn btn-success" style="
-                            margin-top: 20px !important;
+                        <input id="user_address" type="address" placeholder="Enter Your Address*" autocomplete="off" name="address" required><br/>
+                    <label for="message">Instructions</label><br>
+                     <textarea name="message" placeholder="Here you can tell us specific instructions on how you would like you order to be treated"></textarea>
+                        <input type="submit" value="Buy" class="btn"  style="
+                            margin-top: 20px !important; background-color: #868686; color: white;
                         "><br/>
 
                     <p>
+                        <br/>
+                        <br/>
                     <h4 class="success_writing">Thanks For Your Patronage</h4>
                     </p>
                 </form>
@@ -100,8 +104,8 @@
                  
              </ul>
              <div id="checkout_buttons">
-                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Checkout</button>
-                 <button class="btn btn-danger" id="clear_cart">
+                 <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Checkout</button>
+                 <button class="btn" id="clear_cart">
                      clear
                  </button>
              </div>
@@ -116,7 +120,7 @@
    <div id="main">
        <header class="new_offer width_height">
            <div class="text-center">
-               <p>FREE SHIPPING ON ALL ORDERS +$50*</p>
+               <p>FREE SHIPPING ON ALL ORDERS <strong>ABOVE</strong> +$150*</p>
            </div>
        </header>
        <nav class="navbar width_height">
@@ -742,10 +746,12 @@
                <header class="footer_email_arrow_right margin_between">
                    JOIN OUR MAILING LIST
                </header>
-               <input style="color: black" type="text" placeholder="Enter email" name="">
-               <label>
-                   <button type="submit"><i class="fa fa-arrow-right" style="color: black"></i></button>
-               </label>
+               <form action="/page" method="post">
+                   <input style="color: black" type="email" placeholder="Enter email" name="bottom" required>
+                   <label>
+                       <button id="email_subscribe" type="submit"><i class="fa fa-arrow-right" style="color: black"></i></button>
+                   </label>
+               </form>
            </div>
            <div class="col-md-3">
                 <div class="foot_social text-center margin_between">
@@ -771,53 +777,6 @@
                 </div>
            </div>
        </div>
-        <!-- PAYMENTS METHODS COMMENTED OUT -->
-      <!--  <div class="row">
-           <div class="col-md-4">
-               
-           </div>
-           <div class="col-md-6 margin_between payments_method">
-               <div class="row">
-                   <div class="col-md-2">
-                       
-                   </div>
-                   <div class="col-md-10">
-                    <div class="row img">
-                         <div class="col-md-1 img_containers">
-                            <img id="img" src="./assets/img/creditcards_american_express-54be4e6bfc1dbd42f93af603e102fde2356dfe2372a7dd851074964337533296.svg" width="60">
-                       </div>
-                        <div class="col-md-1">
-                           <img src="./assets/img/creditcards_apple_pay-d460161363710d3569a32e30d86970452cbc865913615b792b184c8d448108dc.svg" width="60">
-                       </div>
-                        <div class="col-md-1">
-                           <img src="./assets/img/creditcards_diners_club-d07838507a213e5e52ef4272d3ccfe3da294642628264cd0934baf6878ceb197.svg" width="60">
-                       </div>
-                        <div class="col-md-1">
-                           <img src="./assets/img/creditcards_discover-96a6318d3deeede785ba12114a8d00bd23731f9f16e14ddcd0bdfd5e1d846307.svg" width="60">
-                       </div>
-                        <div class="col-md-1">
-                           <img src="./assets/img/creditcards_jcb-8f8079695e74d5688707997b208994c4d8078baa58b866ed47852cf9674d9332.svg" width="60">
-                       </div>
-                        <div class="col-md-1">
-                           <img src="./assets/img/creditcards_paypal-dd71910a20fd73f78b4eed60e89331d4f4ceb38d55ef42e1e9935d78070ba3e2.svg" width="60">
-                       </div>
-                        <div class="col-md-1">
-                           <img src="./assets/img/creditcards_visa-e9f829d15f5ec3b1953ba8b9bc59b448ddb1ec9235ae70c7936178744cb31489.svg" width="60">
-                       </div>
-                        <div class="col-md-1">
-                           <img src="./assets/img/creditcards_master-94df290d56a3c6424296953282e18e46895ba94bdef368640eb52f8349915610.svg" width="60">
-                       </div>
-                    </div>
-                   </div>
-               </div>
-           </div>
-            <div class="col-md-4">
-              
-           </div>
-       </div> -->
-
-       
-
     </footer>
     </div>
 
@@ -828,12 +787,12 @@
    <script type="text/javascript" src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./assets/js/main.js"></script>
     <script type="text/javascript">
-    
-
     /*=====the cart menus=====*/
+        var cartWidth =  document.getElementById("sidenav");
+        var pageWidth = document.getElementById("main");
     function openCartMenu() {
-        document.getElementById("sidenav").style.width = "300px";
-        document.getElementById("main").style.marginRight = "300px";
+        cartWidth.style.width = "300px";
+        pageWidth.style.marginRight = "300px";
         document.getElementById("main").style.opacity = "0.2";
     }
     function closeCartMenu() {
@@ -844,9 +803,9 @@
     /*==========OPERATING THE CART =============*/
      document.onreadystatechange= function(){
         if(document.readyState === "complete"){
-            app.cartCtrl();
+            app.cartCtrl()
             }
-        };
+     };
 
 
 
@@ -865,108 +824,108 @@
 
 
         // ========================END OF CHECK FUNCTION==================
-        // ==========Handling items add to cart notifications===========
-$(".added_notification").fadeOut(10);
+                    // ==========Handling items add to cart notifications===========
+            $(".added_notification").fadeOut(10);
 
-// ========animations for first box=====
-$("#aloha_container").click(function(){
-    $("#aloha_notify").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            // ========animations for first box=====
+            $("#aloha_container").click(function(){
+                $("#aloha_notify").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
+
+ })
+
+            // ========animations for second box=====
+
+            $("#crazy_container").click(function(){
+                $("#crazy_notify").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
+
+})
+            // ========animations for third box=====
+            $("#dos_container").click(function(){
+                $("#dos").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
+
+})
+            // ========animations for fourth box=====
+
+            $("#glaze_container").click(function(){
+                $("#glaze").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
 })
 
-// ========animations for second box=====
+            // ========animations for fifth box=====
 
-$("#crazy_container").click(function(){
-    $("#crazy_notify").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
-
-})
-// ========animations for third box=====
-$("#dos_container").click(function(){
-    $("#dos").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            $("#going_container").click(function(){
+                $("#going").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
 })
-// ========animations for fourth box=====
-
-$("#glaze_container").click(function(){
-    $("#glaze").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
-
-})
-
-// ========animations for fifth box=====
-
-$("#going_container").click(function(){
-    $("#going").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            // ========animations for sixth box=====*
+            $("#playa_container").click(function(){
+                $("#playa").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
 })
-// ========animations for sixth box=====*
-$("#playa_container").click(function(){
-    $("#playa").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            // ========animations for seventh box=====
+            $("#mermaid_container").click(function(){
+                $("#mermaid_top").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
+
+            })
+            // ========animations for eighth box=====
+            $("#namastay_container").click(function(){
+                $("#namastay").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
+
+            })
+            // ========animations for ninth box=====
+            $("#muscle_container").click(function(){
+                $("#muscle").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
 })
-// ========animations for seventh box=====
-$("#mermaid_container").click(function(){
-    $("#mermaid_top").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            // ========animations for tenth box=====
+            $("#beach_canvas").click(function(){
+                $("#beach").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
 })
-// ========animations for eighth box=====
-$("#namastay_container").click(function(){
-    $("#namastay").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            // ========animations for eleven box=====
+            $("#shady_beach").click(function(){
+                $("#shady").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
 })
-// ========animations for ninth box=====
-$("#muscle_container").click(function(){
-    $("#muscle").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            // ========animations for 12th box=====
+            $("#racer_container").click(function(){
+                $("#racer").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
 })
-// ========animations for tenth box=====
-$("#beach_canvas").click(function(){
-    $("#beach").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            // ========animations for 13th box=====
+            $("#open_back").click(function(){
+                $("#open").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
 })
-// ========animations for eleven box=====
-$("#shady_beach").click(function(){
-    $("#shady").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            // ========animations for 14th box=====
+            $("#pack_bag").click(function(){
+                $("#pack").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
 })
-// ========animations for 12th box=====
-$("#racer_container").click(function(){
-    $("#racer").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            // ========animations for 15th box=====
+            $("#save_mermaid").click(function(){
+                $("#mermaid").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
-})
-// ========animations for 13th box=====
-$("#open_back").click(function(){
-    $("#open").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
-
-})
-// ========animations for 14th box=====
-$("#pack_bag").click(function(){
-    $("#pack").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
-
-})
-// ========animations for 15th box=====
-$("#save_mermaid").click(function(){
-    $("#mermaid").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
-
-})
-// ========animations for 16th box=====
-$("#adventure_boy").click(function(){
-    $("#adventure").fadeIn("fast");
-    $(".added_notification").fadeOut("3000");
+            })
+            // ========animations for 16th box=====
+            $("#adventure_boy").click(function(){
+                $("#adventure").fadeIn("fast");
+                $(".added_notification").fadeOut("3000");
 
 })
 

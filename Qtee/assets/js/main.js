@@ -1,21 +1,19 @@
 
 var app = {
-    cartCtrl: function(){
-
-
-
-
+    cartCtrl: function () {
      //empty cart...
-     var cart = [];
-
+        'use strict';
+    
+        
      //an object constructor that we can use to create items...
-     function Item(name, price, count, unit, img){
+     function Item(name, price, count, unit, img) {
         this.name = name;
         this.price = price;
         this.count = count;
         this.unit = unit;
         this.img = img;
      }
+    var cart = [];
 
 
      //adding items to cart .....
@@ -104,7 +102,7 @@ var app = {
 
      //deliveryFee
      function deliveryFee(){
-        var fee = 500;
+        var fee = 0;
          return fee;
      }
 
@@ -117,10 +115,10 @@ var app = {
      }
 
 
-     //grandTotal...fee and percent was passws cos they were passed intially
+     //grandTotal...fee and percent was passed cos they were passed intially
      function grandTotal(fee, percent){
          var grandTotal = 0;
-         grandTotal = (totalAmount() + deliveryFee(1000) + serviceCharge(20));
+         grandTotal = (totalAmount(0) + deliveryFee(0) + serviceCharge(10));
 
          return grandTotal;
      }
@@ -151,18 +149,18 @@ var app = {
              //output += "<li>" + cartArray[i].name "</li> "  //ES5 syntax    
          }
          var cartItems = document.getElementById('cartItems');
-         var payoutCart = document.getElementById('Payout_cart');
+         var payoutCart = document.getElementById('payout_cart');
          var counter = document.getElementById('count');
          var checkout_count = document.getElementById('checkout_count');
          var totalAmount = document.getElementById('totalAmount');
          var checkout_totalAmount = document.getElementById('checkout_totalAmount');
          var cart_count = document.getElementById('cart_count');
          var small_cart_count = document.getElementById('small_cart_count');
-
+         var cartList = document.getElementById("cartItems");
 
 
          cartItems.innerHTML = output;
-         payoutCart.innerHTML = output;
+         payoutCart.textContent = cartList.textContent;
          counter.innerHTML = totalCountOfItems();
          cart_count.innerHTML = totalCountOfItems();
          totalAmount.innerHTML =  grandTotal();
@@ -248,5 +246,5 @@ var app = {
      displayCartChanges();
      
    }
-
+    
 };
