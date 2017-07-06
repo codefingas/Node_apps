@@ -52,9 +52,9 @@ app.use('/Auth', authRouter);
 //=====Routing the app====
 app.get("/", function(req, res){
 	res.render("index", {
-						title: 'Books',
-						 nav: nav
-					});
+				title: 'Books',
+				 nav: nav
+			});
 
 });
 

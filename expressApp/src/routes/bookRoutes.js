@@ -5,12 +5,12 @@ var objectId = require('mongodb').ObjectID;
 
 var router = function(nav){
 	//====securing the whole book routes===
-	bookRouter.use(function (req, res, send) {
-		if(!req.user){
-			res.redirect("/")
-		}
-		next();
-	})
+	bookRouter.use( function(req, res, next) {
+			if(!req.user) {
+				res.redirect("/auth/register")
+			}
+			next();
+		})
 	//=====End of securing the whole book routes===
 // creating the routing for books
 bookRouter.route("/")

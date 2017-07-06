@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compactible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../assets/main/main.css">
+	<title>MyBlog || Register</title>
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../../assets/lib/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="../../assets/lib/font-awesome/css/font-awesome.min.css" />
+  <!-- endbower -->
+    <!-- bower:js -->
+    <script src="../../assets/lib/jquery/dist/jquery.js"></script>
+    <script src="../../assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+</head>
+<body>
+    <!-- topnav -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<%=nav[0].Link%>"><%=nav[0].Text%></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+           <% for (var i=1; i<nav.length; i++){%>
+            <li><a href="<%=nav[i].Link%>"><%=nav[i].Text%></a></li>
+          <%}%>
+          </ul>
+        </div>
+      </div>
+    </nav>
+     <!--====================== second nav =======================-->
+     
+
+     <!-- ===============HOME || HERO IMAGE============== -->
+      <!--=======END OF ADDING OVERLAY TO BACKGROUND IMAGE========== -->
+     <div id="home" class="container-fluid">
+		 <div id="mapMarkers"></div>
+			<div class="action">
+				<div class="row">
+					<div class="col-md-4">
+					
+					</div>
+					<div class="col-md-4">
+						 <h3 class="sign_up text-center">
+							 Sign up
+						</h3>
+						<div class="checkout_count">
+							<form class="text-center" name="SignUpForm" action="/auth/signUp" method="POST">
+							  <input type="text" placeholder="Username" name="userName" id="userName" required="required"><br/>
+								<label></label><br/>
+							   <input type="email" placeholder="Email" name="Email" id="Email" required><br/>
+								<label></label><br/>
+							  <input type="password" placeholder="Password" name="password" id="password" required="required"><br/>
+							  <input type="submit" value="Sign Up" class="text-center btn btn-warning"  style="
+									margin-top: 20px !important;
+								"><br/>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-4">
+					</div>
+				</div>
+				</div>
+			 </div>
+     <!-- ===============End of HOME || HERO IMAGE============== -->
+		
+	<!--==========SEction two ========-->
+      <div class="section_2">
+        <div class="container-fluid">
+            <div class="row">
+              <div id="section_2_jumbotron" class="jumbotron text-center">
+                 <h1>Connect With The World</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1">
+                
+              </div>
+              <div class="col-md-5">
+                  <h4>
+                     MyBlog gives you the opportunity to Know your audience..
+                  </h4>
+                  <p class="section_2_p">
+                    Find out which posts are a hit with MyBlog's built-in analytics. You’ll see where your audience is coming from and what they’re interested in. You can even connect your blog directly to<b> Google Analytics</b> for a more detailed look.
+                  </p>
+              </div>
+              <div class="col-md-1">
+                
+              </div>
+              <div class="col-md-5">
+                <img class="img-responsive audience" src="../../assets/main/meet_people.jpg">
+              </div>
+            </div>
+        </div>
+      </div>
+     <!--==========End of SEction two ========-->
+	
+     <!-- =====================Footer=============== -->
+     <footer class="footer">
+         <div class="container">
+             <section>
+    <ul>
+      <li><h3>Help</h3></li>
+      <li><a href="#" target="_blank" class="ga-footer" data-track="Help Center">Help Center</a></li>
+      <li><a href="#" target="_blank" class="ga-footer" data-track="Help Forum">Help Forum</a></li>
+      <li><a href="#" target="_blank" class="ga-footer" data-track="Video Tutorials">Video Tutorials</a></li>
+    </ul>
+    <ul>
+      <li><h3>Community</h3></li>
+      <li><a href="#" target="_blank" class="ga-footer" data-track="Blogger Buzz">Blogger Buzz</a></li>
+      <li><a href="#" target="_blank" class="ga-footer" data-track="+Blogger">+Blogger</a></li>
+    </ul>
+    <ul>
+      <li><h3>Developers</h3></li>
+      <li><a href="#" target="_blank" class="ga-footer" data-track="Blogger API">Blogger API</a></li>
+      <li><a href="#" target="_blank" class="ga-footer" data-track="Developer Forum">Developer Forum</a></li>
+    </ul>
+  </section>
+  <hr>
+  <section class="meta">
+    <ul>
+      <li><a href="#" target="_blank" class="ga-footer" data-track="Terms of Service">Terms of Service</a></li>
+      <li><a href="#" target="_blank" class="ga-footer" data-track="Privacy">Privacy</a></li>
+      <li><a href="#" target="_blank" class="ga-footer" data-track="Content Policy">Content Policy</a></li>
+    </ul>
+    <div>
+      <span class="copyright">Copyright © 1999 - 2017 Google</span>
+    </div>
+  </section>
+         </div>
+      </footer>
+     <!-- =============END OF FOOTER=================== -->
+
+
+
+   <script type="text/javascript" src="./assets/plugins/jquery.js"></script>
+   <script type="text/javascript" src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -3,11 +3,22 @@ var authRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
 var passport = require('passport');
 
+var nav = [{
+			Link: "/",
+		   Text: "MyBlog"},
+		   {
+            Link:"/books",
+		    Text: "Book"
+		}, {
+			Link: "/Authors",
+			Text: 'Author'
+		}];
+
 var router = function () {
 	//=====Routing the sign up====
 	authRouter.route('/signUp')
 		.post(function (req, res) {
-			console.log(req.body);
+			console.log(`request from signup ${req.body}`);
 			var url = 'mongodb://localhost:27017/libaryApp';
 	 		mongodb.connect(url, function(err, db) {
  			var collection = db.collection('users');
@@ -30,7 +41,7 @@ var router = function () {
 		//====securing the routes===
 		.all( function(req, res, next) {
 			if(!req.user) {
-				res.redirect("/")
+				res.redirect("/auth/register")
 			}
 			next();
 		})
@@ -46,6 +57,15 @@ var router = function () {
 		    .get(function(req, res){
 		    	res.json(req.user);
 		    });
+	//===Routing the false login====
+	authRouter.route("/register")
+		.get(function (req, res) {
+		res.render('register', {
+			title: 'Books',
+			nav: nav,
+			
+		});
+	})
 		return authRouter;
 };
 

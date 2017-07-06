@@ -22,6 +22,7 @@ module.exports = function () {
 			    	} else {
 			    		done(null, false, {message: 'Bad Password'});
 			    	}
+			    	console.log(`error from local strategy ${err}`);
 			    }
 			)
 		})
