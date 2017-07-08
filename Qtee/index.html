@@ -7,6 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/plugins/font_awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+
 </head>
 <body>
     
@@ -71,7 +73,7 @@
                         <input id="user_address" type="address" placeholder="Enter Your Address*" autocomplete="off" name="address" required><br/>
                     <label for="message">Instructions</label><br>
                      <textarea name="message" placeholder="Here you can tell us specific instructions on how you would like you order to be treated"></textarea>
-                        <input type="submit" value="Buy" class="btn"  style="
+                        <input id="buy_button" type="submit" value="Buy" class="btn"  style="
                             margin-top: 20px !important; background-color: #868686; color: white;
                         "><br/>
 
@@ -158,8 +160,8 @@
             <img src="./assets/img/qtee_logo_d5675f44-8505-4ece-96de-edde09d9d5c8_250xbe9b.png">
         </div>
         <div class="container text-center container_page_sections" style=" font-size: 14px;">
-            <div class="text-center">
-                <ul class="ul_nav nav navbar-nav pageNav">
+            <div id="nav_before_slideshow" class="text-center">
+                <ul class="nav navbar-nav pageNav">
                     <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">SHOP</a></li>
                      <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">APPAREL</a></li>
                     <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">SHOES</a></li>
@@ -167,9 +169,6 @@
                      <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">CREATE YOUR OWN</a></li>
                      <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">QTEE REP</a></li>
                      <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">OUR CHARITY</a></li>
-                     <li class="icon">
-                         <a href="javascript:void(0);" onclick="pagemenu();">&#9776;</a>
-                     </li>
                 </ul>
             </div>
         </div>
@@ -214,9 +213,11 @@
             </div>
             <div class="row filter_select margin_between">
                 <div class="col-sm-2 col-md-2">
-                    <h5>
-                        Filter
-                    </h5>
+                    <label>
+                        <h5>
+                            Filter
+                        </h5>
+                    </label>
                     <select>
                         <option>
                             All products
@@ -254,9 +255,11 @@
                     
                 </div>
                 <div class="col-sm-2 col-md-2">
-                    <h5>
-                        Sort
-                    </h5>
+                    <label>
+                        <h5>
+                            Sort
+                        </h5>
+                    </label>
                     <select>
                         <option>
                             Featured
@@ -300,6 +303,7 @@
                                             $10
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="aloha_notify" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -318,6 +322,7 @@
                                             $14
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="crazy_notify" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -336,6 +341,7 @@
                                             $13
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="dos" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -354,6 +360,7 @@
                                             $17
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="glaze" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -379,6 +386,7 @@
                                             $15
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="going" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -397,6 +405,7 @@
                                             $20
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="playa" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -415,6 +424,7 @@
                                             $25
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                      <p id="mermaid_top" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -433,6 +443,7 @@
                                             $15
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="namastay" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -456,6 +467,7 @@
                                             $17 
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="muscle" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -474,6 +486,7 @@
                                             $14
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="beach" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -492,6 +505,7 @@
                                             $14
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="shady" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -510,6 +524,7 @@
                                             $17
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="racer" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -534,6 +549,7 @@
                                             $17
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="open" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -552,6 +568,7 @@
                                             $15
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="pack" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -570,6 +587,7 @@
                                             $18
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="mermaid" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -588,6 +606,7 @@
                                             $20
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="adventure" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -614,6 +633,7 @@
                                             $17 
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="muscle" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -632,6 +652,7 @@
                                             $14
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="beach" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -650,6 +671,7 @@
                                             $14
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="shady" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -668,6 +690,7 @@
                                             $17
                                         </h5>
                                     </p>
+									<button class="checkout_btn">ADD TO CART</button>
                                     <p id="racer" class="added_notification">
                                         ADDED TO CART
                                     </p>
@@ -748,9 +771,7 @@
                </header>
                <form action="/page" method="post">
                    <input style="color: black" type="email" placeholder="Enter email" name="bottom" required>
-                   <label>
                        <button id="email_subscribe" type="submit"><i class="fa fa-arrow-right" style="color: black"></i></button>
-                   </label>
                </form>
            </div>
            <div class="col-md-3">
@@ -787,6 +808,12 @@
    <script type="text/javascript" src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./assets/js/main.js"></script>
     <script type="text/javascript">
+		  /*=====setting the products to scroll into view=====*/
+			var products = document.getElementById('products');
+			products.scrollIntoView();
+		
+		 /*=====End of setting the products to scroll to top=====*/
+		
     /*=====the cart menus=====*/
         var cartWidth =  document.getElementById("sidenav");
         var pageWidth = document.getElementById("main");

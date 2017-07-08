@@ -1,4 +1,4 @@
-body{
+abody{
     font-size: 14px;
     color: #868686;
 }
@@ -234,13 +234,34 @@ footer ul li{
 textarea{
     width: 100%;
 }
-input,label{
+#myModal input,#myModal label{
     display: flex;
     align-content: left;
     align-items: left;
     width: 100%;
 }
-
+#buy_button{
+    width: 10% !important;
+}
+#nav_before_slideshow ul li{
+    display: inline-block
+}
+.filter_select{
+    display: flex;
+    align-content: left;
+    align-items: left;
+    color: #000 !important;
+}
+.filter_select h5, select, option{
+    font-weight: lighter;
+    color: #868686;
+    font-size: 12px;
+}
+.filter_select select, option{
+    width: 100%;
+    font-weight: 700;
+    padding: 10px !important;
+}
 
 
 
@@ -250,34 +271,13 @@ input,label{
      margin-top: -20px;
      width: 100%;
      border-bottom: 0.2px solid #d3d6d7;
-    }   
-    ul.pageNav li:not(:first-child){
-        display: none;
     }
-    ul.pagNav li.icon{
-        float: right;
-        display: block;
-    }
-    .sdienav{
+    .sidenav{
         padding-top: 15px;
         font-size: 18px;
     }
     .sidenav a{
         padding-top: 15px;
         font-size: 18px;
-    }
-    .filter_select h5{
-    color: #000 !important;
-    margin-left: -220px;
-    }
-    .filter_select h5, select, option{
-        font-weight: lighter;
-        color: #868686;
-        font-size: 12px;
-    }
-    .filter_select select, option{
-        width: 100%;
-        font-weight: 700;
-        padding: 10px;
     }
 }

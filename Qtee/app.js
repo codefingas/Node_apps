@@ -22,14 +22,13 @@ app.post("/page",urlencodedParser, function(req, res){
 	var transporter = nodemailer.createTransport({
         service : 'gmail',
         auth: {
-            //=====the starred field has to be filled with the email username and password===
-            user: '**********',
-            pass: '*********'
+            user: 'udohezekiel34@gmail.com',
+            pass: 'conven3ntgmail'
         }
     });
     var mailOptions = {
         from: '${data.email}',
-        to: ', ${data.email}',
+        to: 'udohezekiel34@gmail.com, ${data.email}',
         subject: 'subscribe request',
         html: `Hello! a user has subscribe to recieve information of recent updates<br/>
 				email: ${data.bottom}`,
@@ -53,14 +52,13 @@ app.post("/index", urlencodedParser, function(req, res){
 	var transporter = nodemailer.createTransport({
         service : 'gmail',
         auth: {
-            //=====the starred field has to be filled with the email username and password===
-            user: '********',
-            pass: '********'
+            user: 'udohezekiel34@gmail.com',
+            pass: 'conven3ntgmail'
         }
     });
     var mailOptions = {
         from: '${data.email}',
-        to: ', ${data.email}',
+        to: 'udohezekiel34@gmail.com, ${data.email}',
         subject: 'PURCHASE request',
         html: `<!DOCTYPE html>
 				<html>
