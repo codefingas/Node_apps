@@ -11,13 +11,15 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.3",
     "gulp-jshint": "^2.0.4",
+    "http": "0.0.0",
     "jade": "^1.11.0",
     "mocha": "^3.4.2",
     "mongodb": "^2.2.29",
     "mongoose": "^4.11.0",
     "mssql": "^4.0.4",
     "passport": "^0.3.2",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "xml2js": "^0.4.17"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -31,7 +33,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "start": "nodemon app.js"
+    "start": "gulp serve"
   },
   "keywords": [],
   "author": "",
